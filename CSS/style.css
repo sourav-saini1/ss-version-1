@@ -1,0 +1,364 @@
+ 
+
+ * {
+     margin-bottom: 0;
+     font-weight: 900;
+    scroll-behavior: smooth;
+ }
+
+
+ /* tag selectors  */
+
+
+ body {
+
+     /* //by default there is some margin so set it out yourself */
+     margin: 0;
+     text-align: center;
+     font-family: 'Ubuntu', sans-serif;
+ }
+
+
+ .top-container {
+     position: relative;
+     padding-top: 170px;
+     background-color: #bdc1f7;
+ }
+
+ h1 {
+     font-family: 'Sacramento';
+     /* if we use percentage and the em than the website font got inherited  */
+     /* rem inherit from the root  */
+
+     font-size: 5rem;
+     /* setting the margin for the h1 because there is some default css marrgin setted for the h1  */
+     margin-top: 0;
+     margin-bottom: 0;
+     color: #136c6c;
+     line-height: 200%;
+ }
+
+ h2 {
+     font-size: 2.3rem;
+     font-weight: 900;
+     font-weight: bolder;
+     color: #136c6c;
+     margin-top: 10px;
+ }
+
+ h3 {
+     color: #11999E;
+ }
+
+ a {
+     color: #11999E;
+ }
+
+
+
+ /* //skills images */
+ /* they are now of width of 25 percent of there parent that is the skill row  */
+ .webd {
+
+     float: left;
+     width: 25%;
+     margin-right: 30px;
+
+ }
+
+ .set {
+     float: right;
+     width: 25%;
+     margin-left: 30px;
+
+ }
+
+
+
+ /* clouds */
+ .top-cloud {
+     height: 100px;
+     position: absolute;
+     top: 64px;
+     right: 231px;
+ }
+
+ .bottom-cloud {
+     height: 100px;
+     position: absolute;
+     left: 168px;
+     top: 364px;
+ }
+
+
+
+ /* mountain picture  */
+ .mountain {
+     margin-top: 53px;
+     height: 394px;
+ }
+
+ /* containers section   */
+
+
+ .middle-container {
+     margin-bottom: 60px;
+ }
+
+ .middle-container div {
+     margin-top: 30px;
+     padding: 14px;
+ }
+
+ .humanpic {
+     width: 12%;
+ }
+
+ .intromine {
+     line-height: 2;
+     margin: 20px auto;
+     width: 450px;
+ }
+
+ .skill-row {
+     width: 50%;
+     margin: 100px auto 25px auto;
+     text-align: left;
+     line-height: 3;
+ }
+
+
+ .btnabove {
+     margin-bottom: 25px;
+     padding: 20px;
+     width: 600px;
+      line-height: 2; 
+      letter-spacing: .5px;
+     margin: 10px  auto 10px auto ;
+     letter-spacing: .5px;
+ }
+
+ .btn {
+     background-color: #136c6c;
+     color: white;
+     font-weight: 900;
+     text-decoration: none;
+     padding: 10px;
+     border-radius: 8px;
+     padding-left: 25px;
+     padding-right: 25px;
+
+ }
+
+ .btn:hover {
+     background-color: #167e7e;
+ }
+
+ .bottom-container {
+     background-color: #bdc1f7;
+     margin-bottom: 0;
+     padding: 30px;
+ }
+
+ .bottom-container a {
+     text-decoration: none;
+     line-height: 3;
+     padding: 23px;
+     color: #136c6c;
+     font-weight: bold;
+ }
+
+ .bottom-container p {
+     color: white;
+ }
+
+
+ /* utility classes */
+
+ hr {
+     border: #b9cdce;
+     border-style: dotted;
+     border-top: 0;
+     border-width: 9px;
+     width: 40px;
+     margin-top: 40px;
+     margin-bottom: 40px;
+ }
+
+ @media only screen and (max-width:1070px){
+    
+*{
+    /* overflow: hidden; */
+}
+.top-container {
+    padding-top: 150px;
+
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+   
+}
+.bottom-cloud {
+    height: 75px;
+    left: 62px;
+    top: 362px;
+}
+
+.top-cloud {
+    height: 75px;
+    top: 40px;
+    right: 74px;
+}
+
+ /* mountain picture  */
+ .mountain {
+    margin-top: 53px;
+    height: 250px;
+}
+ }
+
+ @media only screen and (max-width:646px){
+    
+.top-container {
+    padding-top: 100px;
+
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+   
+}
+h3{
+    font-size: 1rem;
+}
+
+
+/* //clouds */
+/* clouds */
+.top-cloud {
+    height: 50px;
+    top: 30px;
+    right: 22px;
+}
+
+.bottom-cloud {
+    height: 50px;
+    left: 9px;
+    top: 261px;
+}
+
+ /* mountain picture  */
+ .mountain {
+    margin-top: 53px;
+    height: 180px;
+}
+
+/* images */
+
+.webd {
+    float: left;
+    width: 20%;
+    margin-top: -7px;
+    margin-right: -98px;
+
+}
+
+.set {
+    float: right;
+    width: 20%;
+    margin-top: -11px;
+    margin-left: -177px;
+}
+
+.humanpic {
+    width: 35%;
+}
+
+/* // middle container */
+
+.middle-container {
+    margin-bottom: 30px;
+}
+.middle-container div {
+   padding: 0;
+   /* margin: 10px -273px 1px 10px; */
+
+}
+
+.intromine{
+    width: 330px;
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.skill-row {
+    width: 330px;
+    margin: 10px auto 15px auto;
+    text-align: center;
+    line-height: 3;
+}
+.skill-row p{
+    width: 100%;
+    margin: 10px auto;
+    font-size: 15px;
+}
+.skill-row h3{
+    margin-top: 35px;
+}
+
+/* //down  */
+
+.btnabove {
+    width: 315px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.btn {
+    background-color: #136c6c;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+.middle-container .contact-me{
+    margin-bottom: 30px;
+    padding: 6px;
+}
+
+/* //bottom  */
+.bottom-container {
+    background-color: #bdc1f7;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+.bottom-container a {
+    text-decoration: none;
+    line-height: 3;
+    padding: 20px;
+    color: #136c6c;
+    font-weight: bold;
+}
+
+hr{
+    
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+}
+ 
+
