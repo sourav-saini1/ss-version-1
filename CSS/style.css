@@ -59,17 +59,17 @@
  /* //skills images */
  /* they are now of width of 25 percent of there parent that is the skill row  */
  .webd {
-
-     float: left;
-     width: 25%;
-     margin-right: 30px;
-
+    float: left;
+    width: 25%;
+    margin-top: 52px;
+    margin-right: 30px;
  }
 
  .set {
-     float: right;
-     width: 25%;
-     margin-left: 30px;
+    float: right;
+    width: 25%;
+    margin-left: 30px;
+    margin-top: 41px;
 
  }
 
@@ -126,6 +126,10 @@
      text-align: left;
      line-height: 3;
  }
+
+.skill-row h3 {
+    margin-left: 290px;
+}
 
 
  .btnabove {
