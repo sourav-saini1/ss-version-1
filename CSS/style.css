@@ -315,8 +315,10 @@ h3{
     margin: 10px auto;
     font-size: 15px;
 }
-.skill-row h3{
+.skill-row h3 {
     margin-top: 35px;
+    width: 143px;
+    margin-left: 96px;
 }
 
 /* //down  */
