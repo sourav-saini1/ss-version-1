@@ -1,1 +1,1068 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Sourav Saini </title> <link rel="stylesheet" href="CSS/style.css"><!-- <link rel="stylesheet" media="screen and (max-width: 1070px)" href="css/ipad.css"> <link rel="stylesheet" media="screen and (max-width: 646px)" href="css/phone.css"> --> <link rel="icon" href="favicon_s.ico"> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <script src="https://kit.fontawesome.com/eee0ab1aa9.js" crossorigin="anonymous"></script> <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Sacramento&family=Ubuntu:wght@300&display=swap" rel="stylesheet"> </head><body> <div class="top-container"> <img class="top-cloud" src="images/cloud.png" alt=""> <h1>I'm Sourav Saini.</h1> <h2 id="programm" > </h2> <h2> a nerd programmer.</h2> <img class="bottom-cloud" src="images/cloud.png" alt=""> <img class="mountain" src="images/mountain1.png" alt=""> </div><div class="middle-container"> <div class="profile"> <img class="humanpic"src="images/circlehuman.png" alt=""> <h2>Hello.</h2> <p class="intromine">Hey ,I am Sourav I am Student of Computer science and surely love coding in C | C++ | Python and have keen interest in DSA | Machine learning | AI | Full stack development, I am Enthusiastic person and open to Learning always. </p></div><hr> <div class="skills"> <h2>My Skills.</h2> <div class="skill-row"> <img class="webd" src="images/webd.png" alt=""> <h3>Full Stack Web dev.</h3> <p>I am very much skillfull in making Website based upon the Technologies - HTML,CSS,JavaScript and also Frameworks like React.js , Bootstrap , Node.js etc..</p></div><div class="skill-row"> <img class="set" src="images/set.png" alt=""> <h3>Data Structures</h3> <p>I have Intermediate knowledge of the Data Structures and Algorithms(Arrays,Stacks, DP, Trees, Graphs etc... ) in Programming Languages like JAVA ,CPP</p></div></div><hr> <div class="contact-me"> <h2>Get In Touch</h2> <h3>If you have Something For Me </h3> <p class="btnabove">This is the Very First Ver. of this Website, many more changes are going to be done and if You Have any suggestions regarding this website or any Idea then Drop E-mail to me and we can discuss</p><a class="btn" href="mailto:giransourav318@email.com">CONTACT ME</a> </div></div><div class="bottom-container"> <a class="footer-link" href="https://www.linkedin.com/in/sourav-saini-45982620b"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> <a class="footer-link" href="https://www.instagram.com/souravsaini._/"> <i class="fa-brands fa-instagram"></i> Instagram</a> <a class="footer-link" href="twittertobeadd.html"><i class="fa-brands fa-twitter"></i> Twitter</a> <p>© Sourav Saini. ALL Right Reserved</p></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sourav Saini — Salesforce Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080c14;
+      --bg2: #0d1320;
+      --bg3: #111927;
+      --surface: #141d2e;
+      --surface2: #1a2540;
+      --accent: #00a1e0;
+      --accent2: #1fd1ff;
+      --gold: #ffb84d;
+      --green: #3ddc84;
+      --text: #e8eef7;
+      --text2: #8fa3bf;
+      --text3: #4d6380;
+      --border: rgba(0,161,224,0.15);
+      --border2: rgba(0,161,224,0.08);
+      --font-display: 'Syne', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-display);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      position: fixed; width: 10px; height: 10px;
+      background: var(--accent); border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
+    }
+    .cursor-ring {
+      position: fixed; width: 32px; height: 32px;
+      border: 1.5px solid rgba(0,161,224,0.5); border-radius: 50%;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
+    }
+    body:hover .cursor { opacity: 1; }
+
+    /* Canvas bg */
+    #bg-canvas { position: fixed; inset: 0; z-index: 0; opacity: 0.45; }
+
+    /* Navigation */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.2rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(8,12,20,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border2);
+      transition: padding 0.3s;
+    }
+    nav.scrolled { padding: 0.8rem 3rem; }
+    .nav-logo {
+      font-family: var(--font-mono); font-size: 1rem;
+      color: var(--accent); letter-spacing: 0.05em;
+    }
+    .nav-logo span { color: var(--text2); }
+    .nav-links { display: flex; gap: 2.5rem; }
+    .nav-links a {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      color: var(--text2); text-decoration: none;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transition: transform 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    /* Sections */
+    section { position: relative; z-index: 1; }
+
+    /* Hero */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 6rem 3rem 4rem;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono); font-size: 0.8rem;
+      color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 40px; height: 1px;
+      background: var(--accent);
+    }
+    .hero-name {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 1.0; letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+    .hero-name .last { color: transparent; -webkit-text-stroke: 1.5px rgba(0,161,224,0.6); }
+    .hero-title {
+      font-family: var(--font-mono); font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--text2); margin-bottom: 2rem;
+      min-height: 2em;
+    }
+    .hero-title .rotating {
+      color: var(--accent2);
+      border-right: 2px solid var(--accent2);
+      padding-right: 3px;
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{border-color:var(--accent2)} 50%{border-color:transparent} }
+    .hero-desc {
+      max-width: 540px; font-size: 1.05rem; line-height: 1.8;
+      color: var(--text2); margin-bottom: 3rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--accent); color: #000;
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; border: none; cursor: none;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: transparent; color: var(--accent);
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: none;
+    }
+    .btn-outline:hover { background: rgba(0,161,224,0.1); transform: translateY(-2px); }
+
+    /* Floating tech icons strip */
+    .tech-strip {
+      position: relative; z-index: 1;
+      padding: 1.5rem 0;
+      overflow: hidden;
+      border-top: 1px solid var(--border2);
+      border-bottom: 1px solid var(--border2);
+      background: linear-gradient(90deg, var(--bg) 0%, transparent 5%, transparent 95%, var(--bg) 100%);
+    }
+    .tech-scroll {
+      display: flex; gap: 3rem; align-items: center;
+      width: max-content;
+      animation: scroll-left 30s linear infinite;
+    }
+    .tech-strip:hover .tech-scroll { animation-play-state: paused; }
+    @keyframes scroll-left { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .tech-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text3); letter-spacing: 0.08em;
+      white-space: nowrap; transition: color 0.2s;
+    }
+    .tech-item:hover { color: var(--accent2); }
+    .tech-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* Section wrapper */
+    .section-wrap {
+      max-width: 1200px; margin: 0 auto;
+      padding: 6rem 3rem;
+    }
+    .section-label {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .section-label::before {
+      content: ''; display: block; width: 30px; height: 1px;
+      background: var(--accent);
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      letter-spacing: -0.02em; color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      color: var(--text2); font-size: 1rem;
+      max-width: 500px; line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* Experience timeline */
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 1px; background: linear-gradient(to bottom, transparent, var(--border), transparent);
+    }
+    .timeline-item {
+      position: relative; padding: 0 0 3.5rem 2rem;
+      opacity: 0; transform: translateX(-20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .timeline-item.visible { opacity: 1; transform: translateX(0); }
+    .timeline-dot {
+      position: absolute; left: -2.44rem; top: 6px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .timeline-period {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--accent); letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-company {
+      font-size: 1.2rem; font-weight: 700; color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .timeline-role {
+      font-family: var(--font-mono); font-size: 0.8rem;
+      color: var(--text2); margin-bottom: 1rem;
+    }
+    .timeline-points { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .timeline-points li {
+      font-size: 0.9rem; color: var(--text2); line-height: 1.6;
+      padding-left: 1.2rem; position: relative;
+    }
+    .timeline-points li::before {
+      content: '▸'; position: absolute; left: 0;
+      color: var(--accent); font-size: 0.7rem; top: 0.25rem;
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      padding: 2rem;
+      position: relative; overflow: hidden;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s, border-color 0.3s;
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    }
+    .project-card.visible { opacity: 1; transform: translateY(0); }
+    .project-card:hover { border-color: var(--border); }
+    .project-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,161,224,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .project-card::before {
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 16px; height: 16px;
+      background: var(--accent); opacity: 0.5;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+    .project-industry {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .project-title {
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
+      margin-bottom: 0.75rem; line-height: 1.3;
+    }
+    .project-desc {
+      font-size: 0.88rem; color: var(--text2); line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      padding: 0.25rem 0.6rem;
+      background: rgba(0,161,224,0.1); color: var(--accent2);
+      border: 1px solid rgba(0,161,224,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .skill-group {
+      background: var(--surface); border: 1px solid var(--border2);
+      padding: 1.5rem;
+      opacity: 0; transform: translateY(15px);
+      transition: opacity 0.4s, transform 0.4s, border-color 0.3s;
+    }
+    .skill-group.visible { opacity: 1; transform: translateY(0); }
+    .skill-group:hover { border-color: rgba(0,161,224,0.3); }
+    .skill-group-title {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .skill-group-title svg { flex-shrink: 0; }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .skill-pill {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      padding: 0.3rem 0.7rem;
+      background: var(--surface2); color: var(--text2);
+      border: 1px solid var(--border2);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .skill-pill:hover {
+      background: rgba(0,161,224,0.15); color: var(--accent2);
+      border-color: rgba(0,161,224,0.3);
+    }
+
+    /* Certifications */
+    .certs-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .cert-badge {
+      display: flex; align-items: center; gap: 1rem;
+      background: var(--surface); border: 1px solid var(--border2);
+      padding: 1.25rem 1.75rem;
+      flex: 1; min-width: 260px;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 0.4s, transform 0.4s, border-color 0.3s;
+    }
+    .cert-badge.visible { opacity: 1; transform: translateY(0); }
+    .cert-badge:hover { border-color: var(--gold); }
+    .cert-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: rgba(255,184,77,0.1);
+      border: 1px solid rgba(255,184,77,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cert-name {
+      font-size: 0.9rem; font-weight: 700; color: var(--text);
+      line-height: 1.3;
+    }
+    .cert-issuer {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--gold); letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+
+    /* Quote carousel */
+    #quotes {
+      background: var(--bg2);
+      border-top: 1px solid var(--border2);
+      border-bottom: 1px solid var(--border2);
+    }
+    .quotes-wrap { text-align: center; max-width: 800px; margin: 0 auto; }
+    .quote-display {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 600;
+      line-height: 1.6; color: var(--text);
+      min-height: 4em;
+      transition: opacity 0.5s;
+    }
+    .quote-display.fade { opacity: 0; }
+    .quote-display::before { content: '"'; color: var(--accent); margin-right: 0.2em; }
+    .quote-display::after { content: '"'; color: var(--accent); margin-left: 0.2em; }
+    .quote-author {
+      font-family: var(--font-mono); font-size: 0.75rem;
+      color: var(--text3); letter-spacing: 0.1em;
+      margin-top: 1rem;
+      transition: opacity 0.5s;
+    }
+    .quote-author.fade { opacity: 0; }
+    .quote-dots { display: flex; gap: 0.5rem; justify-content: center; margin-top: 2rem; }
+    .qdot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--text3); transition: background 0.2s, width 0.2s;
+      cursor: none;
+    }
+    .qdot.active { background: var(--accent); width: 18px; border-radius: 3px; }
+
+    /* Blog section */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .blog-card {
+      background: var(--surface); border: 1px solid var(--border2);
+      padding: 1.75rem;
+      text-decoration: none;
+      display: block;
+      opacity: 0; transform: translateY(15px);
+      transition: opacity 0.4s, transform 0.4s, border-color 0.3s, background 0.3s;
+    }
+    .blog-card.visible { opacity: 1; transform: translateY(0); }
+    .blog-card:hover { border-color: var(--border); background: var(--surface2); }
+    .blog-tag {
+      font-family: var(--font-mono); font-size: 0.65rem;
+      color: var(--green); letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .blog-title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
+    .blog-desc { font-size: 0.85rem; color: var(--text2); line-height: 1.6; margin-bottom: 1rem; }
+    .blog-arrow { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); }
+
+    /* Contact */
+    #contact { background: var(--bg2); border-top: 1px solid var(--border2); }
+    .contact-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: start;
+    }
+    .contact-info h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+    .contact-info p { color: var(--text2); line-height: 1.7; margin-bottom: 2rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-link {
+      display: flex; align-items: center; gap: 1rem;
+      font-family: var(--font-mono); font-size: 0.8rem; color: var(--text2);
+      text-decoration: none; padding: 0.75rem;
+      border: 1px solid var(--border2);
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .contact-link:hover { color: var(--accent); border-color: var(--border); background: rgba(0,161,224,0.05); }
+    .contact-link-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      background: var(--surface2); border: 1px solid var(--border2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3); letter-spacing: 0.1em; text-transform: uppercase; }
+    .form-input, .form-textarea {
+      background: var(--surface); border: 1px solid var(--border2);
+      color: var(--text); font-family: var(--font-display); font-size: 0.9rem;
+      padding: 0.75rem 1rem;
+      outline: none; transition: border-color 0.2s, background 0.2s;
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); background: var(--surface2); }
+    .form-textarea { resize: vertical; min-height: 120px; }
+
+    /* Footer */
+    footer {
+      text-align: center; padding: 2rem;
+      border-top: 1px solid var(--border2);
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--text3); position: relative; z-index: 1;
+    }
+    footer span { color: var(--accent); }
+
+    /* Scroll indicator */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      z-index: 200; transition: width 0.1s;
+    }
+
+    /* Floating SF logo background */
+    .floating-logos {
+      position: fixed; inset: 0; z-index: 0;
+      pointer-events: none; overflow: hidden; opacity: 0.03;
+    }
+    .fl {
+      position: absolute;
+      animation: float-up linear infinite;
+    }
+    @keyframes float-up {
+      from { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      to { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Reveal animations */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .section-wrap { padding: 4rem 1.5rem; }
+      #hero { padding: 5rem 1.5rem 3rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="floating-logos" id="floatingLogos"></div>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-logo">ss<span>.dev</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero-section">
+    <div id="hero">
+      <div class="hero-eyebrow">Available for opportunities</div>
+      <h1 class="hero-name">Sourav <span class="last">Saini</span></h1>
+      <div class="hero-title">
+        <span id="role-text" class="rotating"></span>
+      </div>
+      <p class="hero-desc">
+        Building scalable Salesforce solutions and crafting seamless user experiences — 2.7+ years of turning complex business requirements into elegant, automated systems.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View Projects ↓</a>
+        <a href="#contact" class="btn-outline">Get in Touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Strip -->
+  <div class="tech-strip">
+    <div class="tech-scroll" id="techScroll"></div>
+  </div>
+
+  <!-- About / Experience -->
+  <section id="experience">
+    <div class="section-wrap">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">2.7+ years building enterprise-grade Salesforce solutions across Automotive, Insurance, and Real Estate.</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">11/2025 — Present</div>
+          <div class="timeline-company">Manras Technologies Pvt. Ltd.</div>
+          <div class="timeline-role">Senior Associate Engineer — Salesforce</div>
+          <ul class="timeline-points">
+            <li>Achieved 20% reduction in CPU execution time by optimizing SOQL queries and enforcing governor limits best practices.</li>
+            <li>Enhanced Salesforce mobile app usability, boosting field efficiency and accessibility by 20%.</li>
+            <li>Designed asynchronous Apex to handle high-volume data and callouts efficiently.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">06/2023 — 11/2025</div>
+          <div class="timeline-company">Manras Technologies Pvt. Ltd.</div>
+          <div class="timeline-role">Associate Engineer — Salesforce</div>
+          <ul class="timeline-points">
+            <li>Developed configurable enterprise apps using Apex, LWC, Aura, Flows — improving UX by 20%.</li>
+            <li>Built reusable Lightning Web Components used across multiple projects, increasing dev efficiency by 40%.</li>
+            <li>Integrated Salesforce with third-party systems via REST/SOAP, cutting manual work by 25%.</li>
+            <li>Provided post-release support reducing issue turnaround time by 30%.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2020 — 2023</div>
+          <div class="timeline-company">Kurukshetra University</div>
+          <div class="timeline-role">Bachelor of Computer Applications — Computer Science</div>
+          <ul class="timeline-points">
+            <li>Ranked 2nd in batch, top 5% of students.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" style="background: var(--bg2); border-top: 1px solid var(--border2);">
+    <div class="section-wrap">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">End-to-end Salesforce solutions delivered across diverse industries.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-industry">🏎 Automotive & Manufacturing</div>
+          <div class="project-title">Attendance & Visit Management System</div>
+          <div class="project-desc">Full web/mobile solution enabling team efficiency by 35% and driving 40% increase in user adoption across field teams.</div>
+          <div class="project-tags">
+            <span class="tag">LWC</span><span class="tag">Apex</span><span class="tag">Mobile</span><span class="tag">Flows</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-industry">🏎 Automotive & Manufacturing</div>
+          <div class="project-title">Marketing Automation Module</div>
+          <div class="project-desc">Fully automated marketing pipeline driving 30% process speed improvement. Integrated with social media channels including Facebook and Google.</div>
+          <div class="project-tags">
+            <span class="tag">Automation</span><span class="tag">Platform Events</span><span class="tag">REST API</span><span class="tag">Social Integration</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-industry">🏎 Automotive & Manufacturing</div>
+          <div class="project-title">Experience Cloud Portal</div>
+          <div class="project-desc">Built and launched a fully functional Experience Cloud site enhancing customer engagement and self-service capabilities with 40% reduction in manual data entry.</div>
+          <div class="project-tags">
+            <span class="tag">Experience Cloud</span><span class="tag">LWC</span><span class="tag">Integration</span><span class="tag">SOAP API</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-industry">🏦 Insurance</div>
+          <div class="project-title">Insurance Workflow Customization</div>
+          <div class="project-desc">Customized Salesforce for insurance-specific workflows and client management — 15% operational efficiency boost and 30% enhancement of platform capabilities.</div>
+          <div class="project-tags">
+            <span class="tag">Sales Cloud</span><span class="tag">Approval Processes</span><span class="tag">Validation Rules</span><span class="tag">LWC</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-industry">🏠 Real Estate</div>
+          <div class="project-title">Workflow Optimization & Analytics</div>
+          <div class="project-desc">Reduced execution time by 25% by optimizing redundant workflows. Created dashboards and reports enabling accurate data-driven decisions for property management.</div>
+          <div class="project-tags">
+            <span class="tag">Dashboards</span><span class="tag">Reports</span><span class="tag">Batch Apex</span><span class="tag">Flows</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-wrap">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Tech Stack</h2>
+      <p class="section-sub">From Salesforce platform internals to front-end components and integrations.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8v4h8V3z"/></svg>
+            Salesforce Core
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Apex</span>
+            <span class="skill-pill">LWC</span>
+            <span class="skill-pill">Aura</span>
+            <span class="skill-pill">Visualforce</span>
+            <span class="skill-pill">SOQL</span>
+            <span class="skill-pill">SOSL</span>
+            <span class="skill-pill">Sales Cloud</span>
+            <span class="skill-pill">Experience Cloud</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Programming
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">jQuery</span>
+            <span class="skill-pill">JSON</span>
+            <span class="skill-pill">XML</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Automation
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Flows</span>
+            <span class="skill-pill">Process Builder</span>
+            <span class="skill-pill">Triggers</span>
+            <span class="skill-pill">Batch Apex</span>
+            <span class="skill-pill">Scheduled Apex</span>
+            <span class="skill-pill">Queueable Apex</span>
+            <span class="skill-pill">Future Methods</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            Integrations
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">REST API</span>
+            <span class="skill-pill">SOAP API</span>
+            <span class="skill-pill">Platform Events</span>
+            <span class="skill-pill">Salesforce Connect</span>
+            <span class="skill-pill">Postman</span>
+            <span class="skill-pill">External Services</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Security & Architecture
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Profiles</span>
+            <span class="skill-pill">Permission Sets</span>
+            <span class="skill-pill">Role Hierarchy</span>
+            <span class="skill-pill">Sharing Rules</span>
+            <span class="skill-pill">OOP Design</span>
+            <span class="skill-pill">CRM Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            Tools & DevOps
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">CI/CD</span>
+            <span class="skill-pill">Data Loader</span>
+            <span class="skill-pill">Workbench</span>
+            <span class="skill-pill">SF Inspector</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-label" style="margin-top: 3.5rem; margin-bottom: 1rem;">Certifications</div>
+      <div class="certs-row">
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb84d" stroke-width="2">
+              <circle cx="12" cy="8" r="6"/><path d="M12 2l1.5 4.5H18l-3.8 2.8 1.5 4.5-3.7-2.7-3.7 2.7 1.5-4.5L6 6.5h4.5z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name">Platform Developer I (PD1)</div>
+            <div class="cert-issuer">Salesforce Certified</div>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb84d" stroke-width="2">
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
+              <path d="M8 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name">AI Associate</div>
+            <div class="cert-issuer">Salesforce Certified</div>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb84d" stroke-width="2">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+              <line x1="4" y1="22" x2="4" y2="15"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name">Trailhead Ranger · 3× Superbadge</div>
+            <div class="cert-issuer">Salesforce Trailhead</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quotes -->
+  <section id="quotes">
+    <div class="section-wrap quotes-wrap">
+      <div class="section-label" style="justify-content: center; margin-bottom: 2rem;">Dev Wisdom</div>
+      <div class="quote-display" id="quoteText"></div>
+      <div class="quote-author" id="quoteAuthor"></div>
+      <div class="quote-dots" id="quoteDots"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <div class="section-wrap">
+      <div class="section-label">Writing</div>
+      <h2 class="section-title">Blog</h2>
+      <p class="section-sub">Sharing knowledge on Salesforce development, LWC patterns, and engineering practices.</p>
+
+      <div class="blog-grid">
+        <a href="#" class="blog-card">
+          <div class="blog-tag">LWC · Tutorial</div>
+          <div class="blog-title">Building Reusable LWC Components for Enterprise Salesforce</div>
+          <div class="blog-desc">Patterns and best practices for creating configurable, reusable Lightning Web Components that scale across multiple projects.</div>
+          <div class="blog-arrow">Read more →</div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-tag">Apex · Performance</div>
+          <div class="blog-title">Mastering SOQL Optimization and Governor Limits</div>
+          <div class="blog-desc">Deep dive into writing efficient SOQL queries, bulkifying triggers, and staying well within Salesforce governor limits.</div>
+          <div class="blog-arrow">Read more →</div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-tag">Integration · API</div>
+          <div class="blog-title">Salesforce REST Integration Patterns with External Systems</div>
+          <div class="blog-desc">A practical guide to integrating Salesforce with third-party services using REST APIs, Named Credentials, and error handling.</div>
+          <div class="blog-arrow">Read more →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-wrap">
+      <div class="contact-inner">
+        <div class="contact-info reveal">
+          <div class="section-label">Let's Talk</div>
+          <h2 class="section-title">Get In Touch</h2>
+          <p>Whether it's a project opportunity, collaboration, or just a chat about Salesforce — my inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:giransourav318@gmail.com" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              giransourav318@gmail.com
+            </a>
+            <a href="tel:+918168915345" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.82-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              </div>
+              +91 8168 915 345
+            </a>
+            <a href="https://linkedin.com/in/sourav-saini-45982620b" target="_blank" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              linkedin.com/in/sourav-saini-45982620b
+            </a>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project or opportunity…"></textarea>
+          </div>
+          <button class="btn-primary" style="align-self: flex-start; cursor: none;" onclick="alert('Form integration via Formspree coming soon!')">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by <span>Sourav Saini</span> · Designed with precision · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Cursor
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function animCursor() {
+      rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
+      cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(animCursor);
+    })();
+    document.querySelectorAll('a, button, .btn-primary, .btn-outline').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.style.width = '16px'; cursor.style.height = '16px'; ring.style.width = '48px'; ring.style.height = '48px'; });
+      el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '32px'; ring.style.height = '32px'; });
+    });
+
+    // Scroll progress
+    window.addEventListener('scroll', () => {
+      const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      document.getElementById('scrollProgress').style.width = (p * 100) + '%';
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Particle canvas
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize(); window.addEventListener('resize', resize);
+    for (let i = 0; i < 80; i++) {
+      particles.push({
+        x: Math.random() * 1920, y: Math.random() * 1080,
+        vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 0.3,
+        color: Math.random() > 0.5 ? '#00a1e0' : '#1fd1ff'
+      });
+    }
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color; ctx.fill();
+      });
+      particles.forEach((a, i) => {
+        particles.slice(i + 1).forEach(b => {
+          const d = Math.hypot(a.x - b.x, a.y - b.y);
+          if (d < 120) {
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `rgba(0,161,224,${0.15 * (1 - d / 120)})`;
+            ctx.lineWidth = 0.5; ctx.stroke();
+          }
+        });
+      });
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // Floating tech logos (SVG shapes)
+    const floatContainer = document.getElementById('floatingLogos');
+    const sfBlue = '#00a1e0';
+    const logos = [
+      // SF cloud
+      `<svg width="60" height="60" viewBox="0 0 60 60"><path d="M30 10 Q20 5 15 15 Q5 12 5 22 Q5 32 15 32 L45 32 Q55 32 55 22 Q55 14 47 13 Q44 5 36 6 Q34 5 30 10Z" fill="${sfBlue}" opacity="0.7"/></svg>`,
+      // JS
+      `<svg width="50" height="50" viewBox="0 0 50 50"><rect width="50" height="50" fill="#f7df1e" rx="3"/><text x="6" y="38" font-family="monospace" font-weight="bold" font-size="22" fill="#000">JS</text></svg>`,
+      // Apex angle bracket
+      `<svg width="50" height="50" viewBox="0 0 50 50"><text x="5" y="40" font-family="monospace" font-weight="bold" font-size="32" fill="${sfBlue}">&lt;/&gt;</text></svg>`,
+      // Component bracket
+      `<svg width="60" height="50" viewBox="0 0 60 50"><rect x="4" y="10" width="52" height="30" rx="4" fill="none" stroke="${sfBlue}" stroke-width="3"/><line x1="4" y1="24" x2="56" y2="24" stroke="${sfBlue}" stroke-width="1.5"/><circle cx="15" cy="17" r="3" fill="${sfBlue}"/><circle cx="25" cy="17" r="3" fill="${sfBlue}" opacity="0.5"/></svg>`,
+      // Database
+      `<svg width="50" height="60" viewBox="0 0 50 60"><ellipse cx="25" cy="12" rx="22" ry="8" fill="none" stroke="${sfBlue}" stroke-width="2.5"/><path d="M3 12 L3 48 Q3 56 25 56 Q47 56 47 48 L47 12" fill="none" stroke="${sfBlue}" stroke-width="2.5"/><path d="M3 28 Q3 36 25 36 Q47 36 47 28" fill="none" stroke="${sfBlue}" stroke-width="1.5" opacity="0.5"/></svg>`,
+      // API symbol
+      `<svg width="70" height="40" viewBox="0 0 70 40"><text x="4" y="30" font-family="monospace" font-size="22" font-weight="bold" fill="${sfBlue}">API</text></svg>`,
+    ];
+    for (let i = 0; i < 18; i++) {
+      const div = document.createElement('div');
+      div.className = 'fl';
+      div.innerHTML = logos[i % logos.length];
+      const size = 40 + Math.random() * 60;
+      div.style.cssText = `left:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${15+Math.random()*20}s;animation-delay:-${Math.random()*20}s;`;
+      floatContainer.appendChild(div);
+    }
+
+    // Tech strip
+    const techs = [
+      {name:'Salesforce',icon:'☁'},
+      {name:'Apex',icon:'⚡'},
+      {name:'LWC',icon:'⚙'},
+      {name:'JavaScript',icon:'𝙅𝙎'},
+      {name:'REST API',icon:'🔗'},
+      {name:'SOQL',icon:'🗄'},
+      {name:'Flows',icon:'➤'},
+      {name:'Experience Cloud',icon:'🌐'},
+      {name:'VS Code',icon:'◈'},
+      {name:'GitHub',icon:'◎'},
+      {name:'CI/CD',icon:'♾'},
+      {name:'Postman',icon:'📡'},
+    ];
+    const strip = document.getElementById('techScroll');
+    const allTechs = [...techs, ...techs];
+    allTechs.forEach(t => {
+      const div = document.createElement('div');
+      div.className = 'tech-item';
+      div.innerHTML = `<span style="font-size:1rem">${t.icon}</span><span>${t.name}</span>`;
+      strip.appendChild(div);
+    });
+
+    // Typing role animation
+    const roles = ['Salesforce Developer', 'Software Developer', 'LWC Specialist', 'Apex Engineer', 'Salesforce Developer'];
+    let rIdx = 0, charIdx = 0, deleting = false;
+    const roleEl = document.getElementById('role-text');
+    function typeRole() {
+      const current = roles[rIdx];
+      if (!deleting) {
+        roleEl.textContent = current.slice(0, ++charIdx);
+        if (charIdx === current.length) { deleting = true; setTimeout(typeRole, 1800); return; }
+      } else {
+        roleEl.textContent = current.slice(0, --charIdx);
+        if (charIdx === 0) { deleting = false; rIdx = (rIdx + 1) % roles.length; }
+      }
+      setTimeout(typeRole, deleting ? 45 : 80);
+    }
+    typeRole();
+
+    // Quotes
+    const quotes = [
+      { text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "— Martin Fowler" },
+      { text: "Simplicity is the soul of efficiency.", author: "— Austin Freeman" },
+      { text: "First, solve the problem. Then, write the code.", author: "— John Johnson" },
+      { text: "Code is like humor. When you have to explain it, it's bad.", author: "— Cory House" },
+      { text: "The best error message is the one that never shows up.", author: "— Thomas Fuchs" },
+      { text: "Make it work, make it right, make it fast.", author: "— Kent Beck" },
+    ];
+    let qIdx = 0;
+    const qText = document.getElementById('quoteText');
+    const qAuthor = document.getElementById('quoteAuthor');
+    const qDots = document.getElementById('quoteDots');
+
+    function buildDots() {
+      qDots.innerHTML = '';
+      quotes.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'qdot' + (i === qIdx ? ' active' : '');
+        d.addEventListener('click', () => goQuote(i));
+        qDots.appendChild(d);
+      });
+    }
+    function goQuote(i) {
+      qText.classList.add('fade'); qAuthor.classList.add('fade');
+      setTimeout(() => {
+        qIdx = i;
+        qText.textContent = quotes[qIdx].text;
+        qAuthor.textContent = quotes[qIdx].author;
+        qText.classList.remove('fade'); qAuthor.classList.remove('fade');
+        buildDots();
+      }, 500);
+    }
+    qText.textContent = quotes[0].text;
+    qAuthor.textContent = quotes[0].author;
+    buildDots();
+    setInterval(() => goQuote((qIdx + 1) % quotes.length), 5000);
+
+    // Scroll reveal (IntersectionObserver)
+    const revealEls = document.querySelectorAll('.timeline-item, .project-card, .skill-group, .cert-badge, .blog-card, .reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), 80 * (Array.from(revealEls).indexOf(e.target) % 4));
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
